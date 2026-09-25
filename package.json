@@ -1,0 +1,30 @@
+{
+  "name": "mba-portal",
+  "version": "1.0.0",
+  "description": "Co-Curricular Evaluation System backend models and services",
+  "main": "server/models/index.js",
+  "scripts": {
+    "test:models": "node server/tests/verifyModels.js",
+    "test:atlas": "node server/tests/testAtlasConnection.js",
+    "test:auth": "node server/tests/testAuthFlow.js",
+    "test": "npm run test:models && npm run test:auth",
+    "seed": "node server/seed/seedDemoUsers.js",
+    "seed:local": "node server/seed/seedDemoUsers.js mongodb://127.0.0.1:27017/co_curricular_db"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose",
+    "co-curricular",
+    "evaluation",
+    "portal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5"
+  }
+}
